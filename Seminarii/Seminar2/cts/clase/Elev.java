@@ -5,18 +5,28 @@ import java.util.Arrays;
 public class Elev extends Aplicant{
 	private int clasa;
 	private String tutore;
-	private static int sumaFinantare;
 	
-	
-	
-	public static int getSumaFinantare() {
-		return sumaFinantare;
+	public int getClasa() {
+		return clasa;
 	}
-
-	public static void setSumaFinantare(int sumaFinantare) {
-		Elev.sumaFinantare = sumaFinantare;
+	public void setClasa(int i) {
+		this.clasa = i;
 	}
-
+	public String getTutore() {
+		return tutore;
+	}
+	public void setTutore(String tutore) {
+		this.tutore = tutore;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Elev: Nume=" + nume + ", Prenume=" + prenume + ", Varsta="
+				+ varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nrProiecte  + ", DenumireProiect="
+				+ Arrays.toString(denumireProiect) + "Clasa=" + clasa + ", Tutore=" + tutore;
+	}
+	
 	public Elev() {
 		super();
 	}
@@ -28,33 +38,10 @@ public class Elev extends Aplicant{
 		this.tutore = tutore;
 	}
 	
-	public int getClasa() {
-		return clasa;
+	public int finantare() {
+		int s=30;
+		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
+		return s;
 	}
-	
-	public void setClasa(int i) {
-		this.clasa = i;
-	}
-	
-	public String getTutore() {
-		return tutore;
-	}
-	
-	public void setTutore(String tutore) {
-		this.tutore = tutore;
-	}
-	
-	public void AfisareSumaFinantare() {
-		super.AfisareSumaFinantare("Elevul ", sumaFinantare);
-	}
-	
-	@Override
-	public String toString() {
-		return "Elev: Nume=" + nume + ", Prenume=" + prenume + ", Varsta="
-				+ varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nrProiecte  + ", DenumireProiect="
-				+ Arrays.toString(denumireProiect) + "Clasa=" + clasa + ", Tutore=" + tutore;
-	}
-	
 	
 }
-

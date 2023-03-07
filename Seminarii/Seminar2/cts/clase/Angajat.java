@@ -5,14 +5,7 @@ import java.util.Arrays;
 public class Angajat extends Aplicant{
 	private String ocupatie;
 	private int salariu;
-	private static int sumaFinantare;
 	
-	public static int getSumaFinantare() {
-		return sumaFinantare;
-	}
-	public static void setSumaFinantare(int sumaFinantare) {
-		Angajat.sumaFinantare = sumaFinantare;
-	}
 	public String getOcupatie() {
 		return ocupatie;
 	}
@@ -35,6 +28,7 @@ public class Angajat extends Aplicant{
 		
 	}
 	
+	
 	@Override
 	public String toString() {
 		return "Angajat: Nume=" + nume + ", Prenume=" + prenume
@@ -42,8 +36,12 @@ public class Angajat extends Aplicant{
 				+ Arrays.toString(denumireProiect) + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
 	}
 	
-	public void AfisareSumaFinantare() {
-		super.AfisareSumaFinantare("Angajatul " , sumaFinantare);
+	
+	public int finantare() {
+		int s=10;
+		// TODO Auto-generated method stub
+		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
+		return s;
 	}
 	
 }

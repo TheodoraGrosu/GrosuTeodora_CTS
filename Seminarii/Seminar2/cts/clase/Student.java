@@ -5,16 +5,8 @@ import java.util.Arrays;
 public class Student extends Aplicant {
 	protected String facultate;
 	protected int an_studii;
-private static int sumaFinantare;
 	
 	
-	
-	public static int getSumaFinantare() {
-	return sumaFinantare;
-}
-public static void setSumaFinantare(int sumaFinantare) {
-	Student.sumaFinantare = sumaFinantare;
-}
 	public String getFacultate() {
 		return facultate;
 	}
@@ -45,8 +37,10 @@ public static void setSumaFinantare(int sumaFinantare) {
 	}
 	
 	
-	public void AfisareSumaFinantare() {
-		super.AfisareSumaFinantare("Studentul ", sumaFinantare);
+	public int finantare() {
+		int s=20;
+		System.out.println("Studentul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
+		return s;
 	}
 	
 }

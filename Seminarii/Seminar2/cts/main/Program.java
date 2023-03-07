@@ -3,7 +3,7 @@ package cts.main;
 import java.io.FileNotFoundException;
 import java.util.List;
 
-import cts.clase.Angajat;
+
 import cts.clase.Aplicant;
 import cts.clase.reader.ReaderAngajat;
 
@@ -14,12 +14,8 @@ public class Program {
 		List<Aplicant> listaAngajati;
 		try {
 			listaAngajati = readerAngajat.readAplicants("angajati.txt");
-			Angajat.setSumaFinantare(100);
-			for(Aplicant angajat:listaAngajati) {
+			for(Aplicant angajat:listaAngajati)
 				System.out.println(angajat.toString());
-				angajat.AfisareSumaFinantare();
-				angajat.AfisareStatus();
-			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -27,4 +23,3 @@ public class Program {
 	}
 
 }
-
