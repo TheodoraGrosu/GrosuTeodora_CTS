@@ -4,9 +4,9 @@ public abstract class Aplicant{
 	protected String nume;
 	protected String prenume;
 	protected int varsta;
-	protected int punctaj;  //punctajObtinut
+	protected int punctajObtinut;  
 	protected int nrProiecte;
-	protected String[] denumireProiect;  //denumiriProiecte
+	protected String[] denumiriProiecte; 
 	protected static int  pragAcceptare = 80;
 	
 	public static int getPragAcceptare() {
@@ -34,14 +34,14 @@ public abstract class Aplicant{
 		this.varsta = varsta;
 	}
 	public void AfisareStatus(){
-		System.out.println("Aplicantul "+nume+" "+prenume+ (punctaj > pragAcceptare ? "" : " nu ") + "a fost acceptat");
+		System.out.println("Aplicantul "+nume+" "+prenume+ (punctajObtinut > pragAcceptare ? "" : " nu ") + "a fost acceptat");
 	}
 		
 	public int getPunctaj() {
-		return punctaj;
+		return punctajObtinut;
 	}
 	public void setPunctaj(int punctaj) {
-		this.punctaj = punctaj;
+		this.punctajObtinut = punctaj;
 	}
 	
 	
@@ -51,23 +51,23 @@ public abstract class Aplicant{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect) {
+	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumiriProiecte) {
 		super();
 		this.nume = nume;
 		this.prenume = prenume;
 		this.varsta = varsta;
-		this.punctaj = punctaj;
+		this.punctajObtinut = punctaj;
 		this.nrProiecte = nr_proiecte;
-		this.denumireProiect = denumireProiect;
+		this.denumiriProiecte = denumiriProiecte;
 	}
 	public int getNr_proiecte() {
 		return nrProiecte;
 	}
-	public void setNr_proiecte(int nr_proiecte, String [] denumireProiect) {
+	public void setNr_proiecte(int nr_proiecte, String [] denumiriProiecte) {
 		this.nrProiecte = nr_proiecte;
-		this.denumireProiect = new String[this.nrProiecte];
+		this.denumiriProiecte = new String[this.nrProiecte];
 		for(int i = 0; i < this.nrProiecte; i++) {
-			this.denumireProiect[i] = denumireProiect[i];
+			this.denumiriProiecte[i] = denumiriProiecte[i];
 		}
 	}
 	

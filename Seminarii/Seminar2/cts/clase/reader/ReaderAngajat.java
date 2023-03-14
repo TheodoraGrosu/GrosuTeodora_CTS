@@ -13,19 +13,19 @@ public class ReaderAngajat extends ReaderAplicant{
 
 	@Override
 	public List<Aplicant> readAplicants(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));  //input2 se va numi scanner
-		input2.useDelimiter(",");
-		List<Aplicant> angajati = new ArrayList<Aplicant>();
+		Scanner scanner = new Scanner(new File(file));  
+		scanner.useDelimiter(",");
+		List<Aplicant> listaAngajati = new ArrayList<Aplicant>();
 
-		while (input2.hasNext()) {
+		while (scanner.hasNext()) {
 			Angajat angajat = new Angajat();
-			super.readAplicant(angajat, input2);
-			angajat.setSalariu(input2.nextInt());
-			angajat.setOcupatie( input2.next());
-			angajati.add(angajat);
+			super.readAplicant(angajat, scanner);
+			angajat.setSalariu(scanner.nextInt());
+			angajat.setOcupatie( scanner.next());
+			listaAngajati.add(angajat);
 		}
-		input2.close();
-		return angajati;
+		scanner.close();
+		return listaAngajati;
 	}
 
 }
