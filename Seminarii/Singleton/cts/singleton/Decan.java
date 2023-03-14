@@ -16,7 +16,7 @@ public class Decan {
 	}
 	@Override
 	public String toString() {
-		return "Decan [nume=" + nume + "]";
+		return "Decan [nume=" + nume + "]" ;
 	}
 	
 	public static Decan getInstanta()

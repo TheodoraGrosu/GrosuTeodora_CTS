@@ -49,7 +49,7 @@ public class Rector {
 
 
 	public static synchronized Rector getInstanta(String nume, int nrMandate, int varsta) {
-		if(instanta==null) {
+		if(instanta == null) {
 			instanta = new Rector(nume, nrMandate, varsta);
 		}
 		return instanta;

@@ -43,7 +43,7 @@ public class Firma {
 
 	@Override
 	public String toString() {
-		return "Firma [nume=" + nume + ", numarAngajati=" + numarAngajati + "]";
+		return "Firma [nume=" + nume + ", numarAngajati =" + numarAngajati + "]";
 	}
 	
 	

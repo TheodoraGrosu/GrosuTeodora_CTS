@@ -20,6 +20,6 @@ public class Program {
 		System.out.println(firma3.toString());
 		
 //		Firma firma4 = new Firma("SC FIRMA SRL", 0); pentru ca am mutat main-ul in alt pachet si am facut constructorul protected la Firma(cts.singleton.registru) si tot puteam creea
-//		singleton register asigura unicitatea obiectelor
+//		singleton register asigura unicitatea obiectelor 
 	}
 }

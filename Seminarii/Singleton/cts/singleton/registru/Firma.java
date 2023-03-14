@@ -29,7 +29,7 @@ public class Firma {
 	
 	
 	public void angajeaza() {
-		this.nrAngajati++;
+		this.nrAngajati++ ;
 	}
 	
 }

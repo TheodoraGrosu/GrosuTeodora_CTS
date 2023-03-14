@@ -11,7 +11,7 @@ public class Registru {
 	public Firma getFirma(String nume) {
 		if(!registru.containsKey(nume)) {
 //			Firma firma = new Firma(nume, 0)
-			registru.put(nume, new Firma(nume, 0));
+			registru.put(nume, new Firma(nume, 0)) ;
 		}
 		return registru.get(nume);
 	}
