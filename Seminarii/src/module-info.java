@@ -6,4 +6,5 @@
  *
  */
 module Seminarii {
+	requires junit;
 }
